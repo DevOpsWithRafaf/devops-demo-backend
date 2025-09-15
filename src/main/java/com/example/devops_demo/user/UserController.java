@@ -37,6 +37,11 @@ public class UserController {
         return new JwtResponse(token);
     }
 
+    @GetMapping(@"/ok")
+    public string login() {
+        return "OK";
+    }
+
     @GetMapping("/{username}")
     public User getUser(@PathVariable String username) {
         return userService.getByUsername(username);
