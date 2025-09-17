@@ -1,0 +1,14 @@
+[Unit]
+Description=DevOps Demo Backend Application
+After=network.target
+StartLimitIntervalSec=0
+
+[Service]
+Type=simple
+Restart=always
+RestartSec=1
+User=ubuntu
+ExecStart=/usr/bin/java -jar /home/ubuntu/devops-demo-backend/target/devops-demo-0.0.1-SNAPSHOT.jar
+
+[Install]
+WantedBy=multi-user.target
