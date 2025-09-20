@@ -19,6 +19,7 @@ public class User {
     private Long id;
 
     private String username;
+    //This is a comment
     private String password;
 
     @OneToMany(mappedBy = "user")
